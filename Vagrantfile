@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64" 
-  config.vm.network "public_network", bridge: "Realtek USB GbE Family Controller #2", ip: "192.168.8.10"
+  config.vm.network "public_network", bridge: "Intel(R) Wi-Fi 6E AX211 160MHz", ip: "192.168.8.10"
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "4096"
     vb.cpus = "2"
