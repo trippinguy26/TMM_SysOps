@@ -1,2 +1,3 @@
 # Ignorer tous les fichiers .log
 *.log
+D:\Vagrant\projects\docker_gpt\.vagrant\machines
