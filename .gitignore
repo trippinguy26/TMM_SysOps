@@ -5,4 +5,4 @@
 db_password.txt
 db_username.txt
 # Ignorer tous les dossiers suivants : 
-.vagrant/machines/
+.vagrant/

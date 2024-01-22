@@ -10,7 +10,7 @@ services:
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: db_username
-      WORDPRESS_DB_PASSWORD: db_password # gestion des secrets
+      WORDPRESS_DB_PASSWORD: db_password
       WORDPRESS_DB_NAME: db
     volumes:
       - wordpress_data:/var/www/html
