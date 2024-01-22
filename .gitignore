@@ -1,3 +1,8 @@
-# Ignorer tous les fichiers .log
+# Ignorer tous les extensions suivantes :
 *.log
-D:\Vagrant\projects\docker_gpt\.vagrant\machines
+*.env
+# Ignorer tous les fichiers suivants : 
+db_password.txt
+db_username.txt
+# Ignorer tous les dossiers suivants : 
+.vagrant/machines/

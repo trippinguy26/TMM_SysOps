@@ -25,7 +25,7 @@ $dockerc = <<-SCRIPT
 SCRIPT
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/bionic64" 
+  config.vm.box = "ubuntu/jammy64"
   config.vm.network "public_network", type: "dhcp"
   #config.vm.synced_folder "partage", "/partage"
   #config.vm.provision "file", source: "hosts", destination: "~/" # www.wp.lab

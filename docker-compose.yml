@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.7'
 
 services:
 
@@ -9,23 +9,35 @@ services:
       - 8080:80
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: miguel
-      WORDPRESS_DB_PASSWORD: miguel # gestion des secrets
-      WORDPRESS_DB_NAME: miguel_db
+      WORDPRESS_DB_USER: db_username
+      WORDPRESS_DB_PASSWORD: db_password # gestion des secrets
+      WORDPRESS_DB_NAME: db
     volumes:
       - wordpress_data:/var/www/html
+    secrets:
+      - db_username
+      - db_password
 
   db:
     image: mysql:latest
     restart: always
     environment:
-      MYSQL_DATABASE: miguel_db
-      MYSQL_USER: miguel
-      MYSQL_PASSWORD: miguel
+      MYSQL_DATABASE: db
+      MYSQL_USER: db_username
+      MYSQL_PASSWORD: db_password
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db_data:/var/lib/mysql
+    secrets:
+      - db_username
+      - db_password
 
 volumes:
   wordpress_data:
   db_data:
+
+secrets:
+   db_username:
+    file: db_username.txt
+   db_password:
+    file: db_password.txt
